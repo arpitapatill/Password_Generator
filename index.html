@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Advanced Password Generator — Neon Glass</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Neon background -->
+  <div class="bg-neon"></div>
+
+  <!-- Theme / small control area -->
+  <button id="themeToggle" class="theme-icon" title="Toggle theme">🌙</button>
+
+  <div class="card">
+    <h1>🔐 Advanced Password Generator</h1>
+
+    <!-- Output -->
+    <div class="output-row">
+      <input id="password" type="password" readonly placeholder="Generated password appears here">
+      <button id="toggleVis" class="icon-btn" title="Show/Hide">👁️</button>
+      <button id="copyBtn" class="icon-btn" title="Copy current password">📋</button>
+    </div>
+
+    <!-- Strength -->
+    <div class="strength-row">
+      <span>Strength</span>
+      <div id="meter" class="meter"><div class="inner"></div></div>
+    </div>
+
+    <!-- Manual -->
+    <div class="manual-row">
+      <input id="manualInput" placeholder="Or create your own password..." />
+      <button id="checkStrengthBtn" class="small-btn">Check Strength</button>
+    </div>
+
+    <!-- Settings -->
+    <div class="settings">
+      <label>Length: <span id="lengthValue">12</span></label>
+      <input id="lengthRange" type="range" min="4" max="32" value="12">
+
+      <div class="checkboxes">
+        <label><input id="uppercase" type="checkbox" checked> Uppercase</label>
+        <label><input id="lowercase" type="checkbox" checked> Lowercase</label>
+        <label><input id="numbers" type="checkbox" checked> Numbers</label>
+        <label><input id="symbols" type="checkbox" checked> Symbols</label>
+      </div>
+    </div>
+
+    <!-- Actions -->
+    <div class="actions">
+      <button id="generateBtn" class="primary">Generate Password</button>
+      <button id="saveBtn" class="secondary">💾 Save Password</button>
+    </div>
+
+    <!-- History header -->
+    <div class="history-header">
+      <h3>Saved Passwords</h3>
+      <div class="history-actions">
+        <button id="copyAllBtn" class="small-btn">Copy All</button>
+      </div>
+    </div>
+
+    <!-- History list -->
+    <div id="historyList" class="history"></div>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
